@@ -17,6 +17,6 @@ def index(request):
     return render(request, 'Web_Autoscheduler/index.html')
 
 def manager_log_reg(request):
-    return render(request, 'Web_Autoscheduler/manager_log_reg.html')
+    return render(request, 'Web_Autoscheduler/manager_log_reg')
 
 

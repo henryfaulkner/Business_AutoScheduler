@@ -68,10 +68,6 @@ TEMPLATES = [
     },
 ]
 
-'''TEMPLATE_DIR = [
-    os.path.join(BASE_DIR, 'Web_Autoscheduler/templates')
-]'''
-
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 

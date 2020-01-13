@@ -1,0 +1,7 @@
+#managerLogin {
+border: 3px solid black;
+}
+
+h2 {
+   color: red;
+}
