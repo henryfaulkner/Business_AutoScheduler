@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Web_Autoscheduler.apps.WebAutoschedulerConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -67,6 +68,10 @@ TEMPLATES = [
         },
     },
 ]
+
+'''TEMPLATE_DIR = [
+    os.path.join(BASE_DIR, 'Web_Autoscheduler/templates')
+]'''
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 

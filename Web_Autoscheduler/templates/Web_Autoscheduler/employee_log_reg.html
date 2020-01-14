@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login / Registration</title>
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'Web_Autoscheduler/style.css' %}">
+  </head>
+  <body>
+    <div class="employeeRegistration"></div>
+        <form id="employeeRegistrationForm" method="post">
+            {%csrf_token%}
+            <legend>Employee Registration</legend>
+            <label>Business Name:</label>
+            <input type="text" name="business" maxlength="40" size="45"> <br>
+            <label>Employee's Name</label>
+            <input type="text" name="name" maxlength="25" size="45"> <br>
+            <label>Employee's Phone Number</label>
+            <input type="text" name="number" maxlength="25" size="45"> <br>
+            <label>Email:</label>
+            <input type="text" name="email" maxlength="25" size="45" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <br>
+            <label>Password:</label>
+            <input type="text" name="password" maxlength="20" size="45"> <br>
+            <input type="button" id="registerButton" onclick="location.href='http://127.0.0.1:8000/Web_Autoscheduler/confirm_email_reg';" value="Register"/>
+        </form>
+    </div>    
+    <div class="employeeLogin">
+      <form id="employeeLoginForm" method="post">
+        {%csrf_token%}
+        <legend>Employee Login</legend>
+        <label>Email:</label>
+        <input type="text" name="email" maxlength="25" size="45" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <br>
+        <label>Password:</label>
+        <input type="text" name="password" maxlength="20" size="45"> <br>
+        <input type="button" id="loginButton" value="Login"/>
+      </form>
+    </div>
+  </body>
+</html>
