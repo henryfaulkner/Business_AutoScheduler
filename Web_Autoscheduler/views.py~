@@ -17,6 +17,14 @@ def index(request):
     return render(request, 'Web_Autoscheduler/index.html')
 
 def manager_log_reg(request):
-    return render(request, 'Web_Autoscheduler/manager_log_reg')
+    registered = 'registerButton' in request.POST # TRUE if registering
+    logged_in = 'loginButton' in request.POST # TRUE if logging in
+    if registered is TRUE:
+         
+    return render(request, 'Web_Autoscheduler/manager_log_reg.html')
 
+def employee_log_reg(request):
+    return render(request, 'Web_Autoscheduler/employee_log_reg.html')
 
+def confirm_email_reg(request):
+    return render(request, 'Web_Autoscheduler/confirm_email_reg.html')

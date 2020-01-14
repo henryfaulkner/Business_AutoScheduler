@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Web_Autoscheduler.apps.WebAutoschedulerConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,8 +80,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '../mysql_script.sql',
+        'USER': 'root',
+        'PASSWORD': 'baseball9',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -125,5 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'autoscheduler156@gmail.com'
 EMAIL_HOST_PASSWORD = 'business_scheduling156'
+EMAIL_PORT = '587'
